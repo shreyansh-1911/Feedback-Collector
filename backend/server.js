@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/fc', {
+mongoose.connect('mongodb+srv://test_fb:kd37g2k5jgLckvth@feedback.iyxugzn.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
