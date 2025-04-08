@@ -6,13 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
 mongoose.connect('mongodb://localhost:27017/fc', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-// Schema
 const feedbackSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -22,7 +20,6 @@ const feedbackSchema = new mongoose.Schema({
 
 const Feedback = mongoose.model("Feedback", feedbackSchema);
 
-// Routes
 app.post("/submit-feedback", async (req, res) => {
   try {
     const feedback = new Feedback(req.body);

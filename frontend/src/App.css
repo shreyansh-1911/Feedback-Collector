@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+
+.mt-custom {
+  margin-top: 200px;
+}
+
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height:80vh; /* Full viewport height */
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
